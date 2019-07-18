@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Col from "react-bootstrap/Col";
 import { connect } from "react-redux";
-import { changeUserAction } from "../actions/actions";
+import { changeUserAction } from "../actions/userActions";
 
 class NavigationBar extends Component {
   handleLogOut = e => {

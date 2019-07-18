@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { connect } from "react-redux";
-import { changeSelectedSizeAction } from "../actions/actions";
+import { changeSelectedSizeAction } from "../actions/cartActions";
 
 class Sizes extends Component {
   handleClick = e => {

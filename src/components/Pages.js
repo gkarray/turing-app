@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import Pagination from "react-bootstrap/Pagination";
 import { connect } from "react-redux";
-import { changeProductsAction, changePageAction } from "../actions/actions";
+import {
+  changeProductsAction,
+  changePageAction
+} from "../actions/productsActions";
 import axios from "axios";
 
 class Pages extends Component {

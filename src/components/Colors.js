@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { connect } from "react-redux";
-import { changeSelectedColorAction } from "../actions/actions";
+import { changeSelectedColorAction } from "../actions/cartActions";
 
 class Colors extends Component {
   handleClick = e => {

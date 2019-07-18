@@ -9,7 +9,7 @@ import {
   changeNbPagesAction,
   changeProductsAction,
   changeCountAction
-} from "../actions/actions";
+} from "../actions/productsActions";
 
 class Products extends Component {
   componentDidMount = e => {

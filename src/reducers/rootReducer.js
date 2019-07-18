@@ -1,3 +1,21 @@
+import {
+  COUNT,
+  NB_PAGES,
+  CART_ID,
+  PAGE,
+  SELECTED_CATEGORY,
+  SELECTED_COLOR,
+  SELECTED_DEPARTMENT,
+  SELECTED_SIZE,
+  CATEGORIES,
+  USER,
+  PRODUCT,
+  PRODUCTS,
+  CUSTOMER,
+  SEARCH_WORD,
+  QUERY
+} from "../actions/types";
+
 const initState = {
   user: null,
   categories: [],
@@ -17,92 +35,92 @@ const initState = {
 
 const rootReducer = (state = initState, action) => {
   switch (action.type) {
-    case "COUNT":
+    case COUNT:
       return {
         ...state,
-        count: parseInt(action.newCount)
+        count: parseInt(action.payload)
       };
-    case "NB_PAGES":
+    case NB_PAGES:
       return {
         ...state,
-        nbPages: parseInt(action.newNbPages)
-      };
-
-    case "CART_ID":
-      return {
-        ...state,
-        cartID: action.newCartID
+        nbPages: parseInt(action.payload)
       };
 
-    case "PAGE":
+    case CART_ID:
+      return {
+        ...state,
+        cartID: action.payload
+      };
+
+    case PAGE:
       //console.log(state.page);
       return {
         ...state,
-        page: parseInt(action.newPage)
+        page: parseInt(action.payload)
       };
-    case "SELECTED_COLOR":
+    case SELECTED_COLOR:
       return {
         ...state,
-        selectedColor: action.newSelectedColor
-      };
-
-    case "CUSTOMER":
-      return {
-        ...state,
-        user: { ...state.user, customer: action.newCustomer }
+        selectedColor: action.payload
       };
 
-    case "SELECTED_SIZE":
+    case CUSTOMER:
       return {
         ...state,
-        selectedSize: action.newSelectedSize
+        user: { ...state.user, customer: action.payload }
       };
 
-    case "PRODUCT":
+    case SELECTED_SIZE:
       return {
         ...state,
-        selectedProduct: action.newProduct
+        selectedSize: action.payload
       };
 
-    case "PRODUCTS":
+    case PRODUCT:
       return {
         ...state,
-        products: action.newProducts
-      };
-    case "QUERY":
-      return {
-        ...state,
-        query: action.query
+        selectedProduct: action.payload
       };
 
-    case "CATEGORIES":
+    case PRODUCTS:
       return {
         ...state,
-        categories: action.newCategories
+        products: action.payload
+      };
+    case QUERY:
+      return {
+        ...state,
+        query: action.payload
       };
 
-    case "SELECTED_DEPARTMENT":
+    case CATEGORIES:
       return {
         ...state,
-        selectedDepartment: parseInt(action.newSelectedDepartment)
+        categories: action.payload
       };
 
-    case "SELECTED_CATEGORY":
+    case SELECTED_DEPARTMENT:
       return {
         ...state,
-        selectedCategory: parseInt(action.newSelectedCategory)
+        selectedDepartment: parseInt(action.payload)
       };
 
-    case "SEARCH_WORD":
+    case SELECTED_CATEGORY:
       return {
         ...state,
-        searchWord: action.newSearchWord
+        selectedCategory: parseInt(action.payload)
       };
 
-    case "USER":
+    case SEARCH_WORD:
       return {
         ...state,
-        user: action.newUser
+        searchWord: action.payload
+      };
+
+    case USER:
+      return {
+        ...state,
+        user: action.payload
       };
 
     default:

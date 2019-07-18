@@ -11,7 +11,7 @@ import {
   changeProductAction,
   changeSelectedSizeAction,
   changeSelectedColorAction
-} from "../actions/actions";
+} from "../actions/cartActions";
 
 class Details extends Component {
   state = {

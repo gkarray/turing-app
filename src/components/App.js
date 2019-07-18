@@ -8,7 +8,7 @@ import Profile from "./Profile";
 import Cart from "./Cart";
 import axios from "axios";
 import { connect } from "react-redux";
-import { changeCartIDAction } from "../actions/actions";
+import { changeCartIDAction } from "../actions/cartActions";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends Component {

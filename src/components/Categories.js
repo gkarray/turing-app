@@ -9,7 +9,7 @@ import {
   changeQueryAction,
   changeSelectedCategoryAction,
   changePageAction
-} from "../actions/actions";
+} from "../actions/productsActions";
 import axios from "axios";
 import { connect } from "react-redux";
 

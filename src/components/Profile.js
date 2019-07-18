@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
-import { changeCustomerAction } from "../actions/actions";
+import { changeCustomerAction } from "../actions/userActions";
 
 class Profile extends Component {
   state = {
