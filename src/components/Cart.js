@@ -4,12 +4,10 @@ import Container from "react-bootstrap/Container";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
-import ReactTimeout from "react-timeout";
 
 class Cart extends Component {
   state = {
-    cart: [],
-    changed: true
+    cart: []
   };
 
   componentDidMount() {
@@ -27,17 +25,11 @@ class Cart extends Component {
     axios.delete(
       "https://backendapi.turing.com/shoppingcart/removeProduct/" + e.target.id
     );
-
-    this.props.setTimout(() => {
-      console.log("pfff");
-    }, 5000);
   };
 
   handlePayment = e => {};
   render() {
     const items = this.state.cart.map((obj, ind) => {
-      const lol = this.state.changed;
-      console.log("pfff");
       return (
         <tr key={ind}>
           <td>{obj.name}</td>
@@ -99,4 +91,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default ReactTimeout(connect(mapStateToProps)(Cart));
+export default connect(mapStateToProps)(Cart);
